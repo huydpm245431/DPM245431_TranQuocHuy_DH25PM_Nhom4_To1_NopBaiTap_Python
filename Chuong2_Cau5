@@ -1,0 +1,3 @@
+# Ghi chú dòng đơn. Dùng #	# Đây là comment
+# Ghi chú nhiều dòng. Dùng chuỗi nhiều dòng	''' ... ''' hoặc """ ... """
+# Ghi chú nhiều dòng (chuẩn). Nhiều dòng bắt đầu từ đầu dòng: #. # Dòng 1 \n# Dòng 2 \n# Dòng 3

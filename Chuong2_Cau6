@@ -1,0 +1,8 @@
+# Trình bày ý nghĩa toán tử:
+# Dấu "/": Chia thực, kết quả luôn là số thực (float) 
+# Dấu "//": Chia hai số, kết quả là phần nguyên của phép chia (làm tròn xuống)
+# Dấu "%": Trả về phần dư khi chia số này cho số kia
+# Dấu "**" Lũy thừa. Tính số này mũ số kia
+# Toán tử "and": Trả về True nếu cả hai biểu thức đều đúng, ngược lại trả về False
+# Toán tử "or": Trả về True nếu ít nhất một biểu thức đúng
+# Toán tử "is": Kiểm tra xem 2 biến có tham chiếu tới cùng một đối tượng trong bộ nhớ hay không
