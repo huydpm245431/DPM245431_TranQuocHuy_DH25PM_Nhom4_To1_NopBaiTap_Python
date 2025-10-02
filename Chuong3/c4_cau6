@@ -1,0 +1,28 @@
+def doc_so(n):
+    so_nho = ["", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín", "mười", 
+              "mười một", "mười hai", "mười ba", "mười bốn", "mười lăm", "mười sáu", "mười bảy", 
+              "mười tám", "mười chín"]
+    so_chuc = ["", "", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"]
+
+    if n < 10:
+        return so_nho[n]
+    
+    if n < 20:
+        return so_nho[n]
+    
+    chuc = n // 10 
+    donvi = n % 10  
+    
+    if donvi == 0:
+        return so_chuc[chuc] + " mươi"
+    else:
+        return so_chuc[chuc] + " mươi " + so_nho[donvi]
+
+# Nhập số
+n = int(input("Nhập một số n (tối đa 2 chữ số): "))
+
+# Kiểm tra nếu số nhập vào hợp lệ
+if 0 <= n <= 99:
+    print(f"Số {n} đọc là: {doc_so(n)}")
+else:
+    print("Số nhập vào không hợp lệ! Vui lòng nhập số từ 0 đến 99.")

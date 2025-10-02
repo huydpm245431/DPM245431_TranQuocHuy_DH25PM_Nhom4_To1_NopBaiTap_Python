@@ -1,0 +1,21 @@
+
+x, y, z = 3, 5, 7
+
+ket_qua = {
+    "a": x == 3,
+    "b": x < y,
+    "c": x >= y,
+    "d": x <= y,
+    "e": x != y - 2,
+    "f": x < 10,
+    "g": x >= 0 and x < 10,
+    "h": x < 0 and x < 10,
+    "i": x >= 0 and x < 2,
+    "j": x < 0 or x < 10,
+    "k": x > 0 or x < 10,
+    "l": x < 0 or x > 10,
+}
+
+# In kết quả của từng biểu thức
+for key, value in ket_qua.items():
+    print(f"Kết quả của biểu thức {key}: {value}")

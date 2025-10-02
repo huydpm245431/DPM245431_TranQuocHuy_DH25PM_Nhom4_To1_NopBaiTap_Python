@@ -1,0 +1,29 @@
+import math
+try:
+    from math import sqrt
+    print("Chương trình giải phương trình bậc 2: ")
+    a = float(input("Nhập a: "))
+    b = float(input("Nhập b: "))
+    c = float(input("Nhập c: "))
+
+    if a == 0:
+        if b == 0:
+            print("Vô nghiệm")
+        else:
+            x = -c / b
+            print("Phương trình bậc 1: x = ", x)
+    else:
+        delta = b**2 - 4*a*c
+        if delta < 0:
+            print("Vô nghiệm")
+        elif delta == 0:
+            x = -b / (2 * a)
+            print("Nghiệm kép: x1 = x2 = ", x)
+        else:
+            x1 = (-b - sqrt(delta)) / (2 * a)
+            x2 = (-b + sqrt(delta)) / (2 * a)
+            print("Nghiệm phân biệt: x1 = ", x1)
+            print("Nghiệm phân biệt: x2 = ", x2)
+
+except ValueError:
+    print("Lỗi: Dữ liệu nhập không hợp lệ")
