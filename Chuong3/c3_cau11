@@ -1,0 +1,33 @@
+def kiem_tra_snt(n):
+    dem = 0
+
+    for i in range(1, n + 1):
+        if n % i == 0:
+            dem += 1
+  
+    if dem == 2:
+        return True
+    else:
+        return False
+
+while True:
+    try:
+
+        n = int(input("Nhập 1 số nguyên dương: "))
+        
+        if n <= 1:
+            print("Số nhập vào phải lớn hơn 1 để kiểm tra số nguyên tố.")
+            continue
+        
+        if kiem_tra_snt(n):
+            print(f"{n} là số nguyên tố.")
+        else:
+            print(f"{n} không phải là số nguyên tố.")
+        
+        hoi = input("Tiếp không Thím? (c/k): ").strip().lower()
+        if hoi == "k":
+            break
+    except ValueError:
+        print("Lỗi: Vui lòng nhập một số nguyên dương hợp lệ.")
+
+print("BYE!")

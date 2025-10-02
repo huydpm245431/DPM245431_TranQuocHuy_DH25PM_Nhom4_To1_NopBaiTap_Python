@@ -1,0 +1,30 @@
+import datetime
+
+def ngay_ke_tiep(ngay, thang, nam):
+    try:
+        # Tạo đối tượng datetime từ ngày, tháng, năm
+        ngay_hien_tai = datetime.date(nam, thang, ngay)
+        
+        # Tính toán ngày kế tiếp bằng cách cộng thêm một ngày
+        ngay_ke_tiep = ngay_hien_tai + datetime.timedelta(days=1)
+        
+        return ngay_ke_tiep
+    except ValueError:
+        # Xử lý nếu nhập ngày không hợp lệ
+        return "Ngày tháng năm không hợp lệ!"
+
+# Nhập vào ngày, tháng, năm
+try:
+    ngay = int(input("Nhập ngày: "))
+    thang = int(input("Nhập tháng: "))
+    nam = int(input("Nhập năm: "))
+
+    # Tính toán và in ra ngày kế tiếp
+    ket_qua = ngay_ke_tiep(ngay, thang, nam)
+    
+    if isinstance(ket_qua, datetime.date):
+        print(f"Ngày kế tiếp là: {ket_qua.day}/{ket_qua.month}/{ket_qua.year}")
+    else:
+        print(ket_qua)  # Nếu ngày không hợp lệ
+except ValueError:
+    print("Lỗi: Vui lòng nhập một ngày, tháng, năm hợp lệ.")

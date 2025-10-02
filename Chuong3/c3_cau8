@@ -1,0 +1,29 @@
+def tinh_toan(a, b, phep_toan):
+    try:
+        if phep_toan == "+":
+            return a + b
+        elif phep_toan == "-":
+            return a - b
+        elif phep_toan == "*":
+            return a * b
+        elif phep_toan == "/":
+            if b == 0:
+                return "Lỗi: Không thể chia cho 0!"
+            return a / b
+        else:
+            return "Lỗi: Phép toán không hợp lệ!"
+    except ValueError:
+        return "Lỗi: Dữ liệu nhập không hợp lệ!"
+
+# Nhập hai giá trị a, b và phép toán
+try:
+    a = float(input("Nhập giá trị a: "))
+    b = float(input("Nhập giá trị b: "))
+    phep_toan = input("Nhập phép toán ('+', '-', '*', '/'): ").strip()
+
+    # Tính toán và xuất kết quả
+    ket_qua = tinh_toan(a, b, phep_toan)
+    print(f"Kết quả: {ket_qua}")
+
+except ValueError:
+    print("Lỗi: Vui lòng nhập một số hợp lệ.")
