@@ -1,0 +1,11 @@
+import math
+
+a = float(input("Nhập cơ số a (a > 0 và a ≠ 1): "))
+x = float(input("Nhập số x (x > 0): "))
+
+if a <= 0 or a == 1 or x <= 0:
+    print("Lỗi: a phải > 0 và ≠ 1, x phải > 0.")
+else:
+    # Tính loga(x) = ln(x) / ln(a)
+    result = math.log(x) / math.log(a)
+    print(f"Logarit cơ số {a} của {x} là: {result}")

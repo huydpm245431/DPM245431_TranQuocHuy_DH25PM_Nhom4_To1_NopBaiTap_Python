@@ -1,0 +1,26 @@
+import time
+
+# Hình 1
+print("Hình 1:")
+print("*")
+print("* *")
+print("* * *")
+print("* * * *")
+time.sleep(5)  # dừng 5 giây
+
+# Hình 2
+print("\nHình 2:")
+for i in range(4, 0, -1):
+    print("* " * i)
+time.sleep(5)
+
+# Hình 3
+print("\nHình 3:")
+for i in range(1, 5):
+    print(" " * (4 - i) + "* " * i)
+time.sleep(5)
+
+# Hình 4
+print("\nHình 4:")
+for i in range(4, 0, -1):
+    print(" " * (4 - i) + "* " * i)

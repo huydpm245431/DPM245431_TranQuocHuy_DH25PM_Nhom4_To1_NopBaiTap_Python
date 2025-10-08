@@ -1,0 +1,32 @@
+def sum_divisors(n):
+    total = 0
+    for i in range(1, n):
+        if n % i == 0:
+            total += i
+    return total
+
+def is_perfect_number(n):
+    return sum_divisors(n) == n
+
+def is_abundant_number(n):
+    return sum_divisors(n) > n
+
+# Nhập số để kiểm tra
+n = int(input("Nhập số nguyên dương n: "))
+
+# Kiểm tra điều kiện đầu vào
+if n <= 0:
+    print("Vui lòng nhập số nguyên dương lớn hơn 0.")
+else:
+    # Kiểm tra số hoàn thiện
+    if is_perfect_number(n):
+        print(f"{n} là số hoàn thiện.")
+    else:
+        print(f"{n} không phải là số hoàn thiện.")
+
+    # Kiểm tra số thịnh vượng
+    if is_abundant_number(n):
+        print(f"{n} là số thịnh vượng.")
+    else:
+        print(f"{n} không phải là số thịnh vượng.")
+

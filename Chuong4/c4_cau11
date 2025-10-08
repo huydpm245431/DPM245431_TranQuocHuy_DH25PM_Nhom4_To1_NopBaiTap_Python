@@ -1,0 +1,24 @@
+#Trường hợp 1:
+#sum1(5): Trả về 5 (không ảnh hưởng đến val).
+#sum2(): Sử dụng val = 5, trả về 5 và đặt val = 0 sau khi chạy.
+#sum3(): Sử dụng val = 0 (sau khi sum2() chạy), vòng lặp range(0, 0, -1) không chạy, trả về 0.
+#kết quả:
+#5
+#5
+###Trường hợp 2:
+ #sum1(5): Trả về 5 (không ảnh hưởng đến val).
+#sum3(): Sử dụng val = 5, trả về 5.
+#sum2(): Sử dụng val = 5, trả về 5 và đặt val = 0 sau khi chạy.
+#kết quả:
+#5
+#5
+#5
+
+#Trường hợp 3:
+#sum2(): Sử dụng val = 5, trả về 5 và đặt val = 0 sau khi chạy.
+#sum1(5): Trả về 5 (không ảnh hưởng đến val).
+#sum3(): Sử dụng val = 0 (sau khi sum2() chạy), trả về 0.
+#kết quả:
+#5
+#5
+#0
