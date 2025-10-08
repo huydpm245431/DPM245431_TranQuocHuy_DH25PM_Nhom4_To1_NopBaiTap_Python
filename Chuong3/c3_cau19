@@ -1,0 +1,16 @@
+import math 
+
+# Nhập dữ liệu
+x = float(input("Nhập x: "))
+n = int(input("Nhập n: "))
+
+# Khởi tạo tổng
+S = 0
+
+# Tính tổng
+for i in range(n + 1):
+    mu = 2 * i + 1
+    S += x**mu / math.factorial(mu)
+
+# In kết quả
+print("Giá trị của S =", S)

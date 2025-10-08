@@ -1,0 +1,14 @@
+#start: Giá trị bắt đầu (mặc định là 0 nếu không được chỉ định).
+#stop: Giá trị dừng (không bao gồm giá trị này trong chuỗi).
+#step: Bước nhảy giữa các số (mặc định là 1 nếu không được chỉ định, có thể âm để đếm ngược).
+#(a) range(5): 0, 1, 2, 3, 4 (5 số).
+#(b) range(5, 10): 5, 6, 7, 8, 9 (5 số).
+#(c) range(5, 20, 3): 5, 8, 11, 14, 17 (5 số).
+#(d) range(20, 5, -1): 20, 19, ..., 6 (15 số).
+#(e) range(20, 5, -3): 20, 17, 14, 11, 8 (5 số).
+#(f) range(10, 5): Rỗng (0 số).
+#(g) range(0): Rỗng (0 số).
+#(h) range(10, 101, 10): 10, 20, ..., 100 (10 số).
+#(i) range(10, -1, -1): 10, 9, ..., 0 (11 số).
+#(j) range(-3, 4): -3, -2, ..., 3 (7 số).
+#(k) range(0, 10, 1): 0, 1, ..., 9 (10 số).
