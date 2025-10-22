@@ -1,0 +1,32 @@
+#1 số hàm quan trọng trong xử lý chuỗi
+#a. len(): Trả về độ dài (số ký tự) của chuỗi.
+chuoi = "Xin chào Python"
+print(len(chuoi))  # Kết quả: 14 (bao gồm cả khoảng trắng)
+#b. lower() và upper()
+  #lower(): Chuyển chuỗi về dạng chữ thường.
+  #upper(): Chuyển chuỗi về dạng chữ hoa.
+chuoi = "Xin Chào"
+print(chuoi.lower())  # Kết quả: xin chào
+print(chuoi.upper())  # Kết quả: XIN CHÀO
+#c. strip(), lstrip(), rstrip()
+  #strip(): Xóa khoảng trắng hoặc ký tự chỉ định ở đầu và cuối chuỗi.
+  #lstrip(): Xóa khoảng trắng hoặc ký tự chỉ định ở đầu chuỗi.
+  #rstrip(): Xóa khoảng trắng hoặc ký tự chỉ định ở cuối chuỗi.
+#chuoi = "   Hello   "
+print(chuoi.strip())  # Kết quả: Hello
+chuoi2 = "!!!Python!!!"
+print(chuoi2.strip("!"))  # Kết quả: Python
+#d. split(): Chia chuỗi thành danh sách các chuỗi con dựa trên ký tự phân tách (mặc định là khoảng trắng).
+# #e. trip(): Xóa khoảng trắng hoặc ký tự đầu/cuối
+chuoi = "   Hi   "
+print(chuoi.strip())  # Kết quả: Hi
+#f. split(): Chia chuỗi thành danh sách
+chuoi = "a,b,c"
+print(chuoi.split(","))  # Kết quả: ['a', 'b', 'c']
+#g. join(): Nối danh sách thành chuỗi
+ds = ['a', 'b', 'c']
+print("-".join(ds))  # Kết quả: a-b-c
+#h. replace(): Thay thế chuỗi
+chuoi = "Hello World"
+print(chuoi.replace("World", "Python"))  # Kết quả: Hello Python
+

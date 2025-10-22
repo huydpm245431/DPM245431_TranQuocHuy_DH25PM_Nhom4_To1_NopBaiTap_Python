@@ -1,0 +1,15 @@
+import os
+
+def get_file_name(duong_dan):
+    # Lấy tên file (bao gồm phần mở rộng) từ đường dẫn
+    return os.path.basename(duong_dan)
+
+def get_song_name(duong_dan):
+    # Lấy tên bài hát (không bao gồm phần mở rộng)
+    ten_file = os.path.basename(duong_dan)
+    return os.path.splitext(ten_file)[0]
+
+# Test chương trình
+duong_dan = input("Nhập đường dẫn file nhạc: ")
+print("Tên file:", get_file_name(duong_dan))
+print("Tên bài hát:", get_song_name(duong_dan))

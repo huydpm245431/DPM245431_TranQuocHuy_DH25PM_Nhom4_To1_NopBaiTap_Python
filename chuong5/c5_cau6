@@ -1,0 +1,12 @@
+import re
+
+def NegativeNumberInStrings(chuoi):
+    #Tìm tất cả số nguyên âm trong chuỗi bằng regex
+    so_am = re.findall(r'-\d+', chuoi)
+    #Chuyển đổi danh sách số âm thành số nguyên và in ra
+    for so in so_am:
+        print(int(so))
+
+#Test
+chuoi = input("Nhập chuỗi: ")
+NegativeNumberInStrings(chuoi)

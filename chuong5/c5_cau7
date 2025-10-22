@@ -1,0 +1,6 @@
+chuoi = input("Nhập chuỗi: ")
+
+# Loại bỏ khoảng trắng dư thừa và viết hoa chữ cái đầu mỗi từ
+chuoi_toi_uu = " ".join(ten.title() for ten in chuoi.split())
+
+print("Chuỗi tối ưu:", chuoi_toi_uu)

@@ -1,0 +1,32 @@
+chuoi = input("Nhập chuỗi: ")
+
+hoa = thuong = so = ky_tu_dac_biet = khoang_trang = nguyen_am = phu_am = 0
+nguyen_am_list = "aeiouAEIOU"
+
+for ky_tu in chuoi:
+    if ky_tu.isupper():
+        hoa += 1
+        if ky_tu in nguyen_am_list:
+            nguyen_am += 1
+        else:
+            phu_am += 1
+    elif ky_tu.islower():
+        thuong += 1
+        if ky_tu in nguyen_am_list:
+            nguyen_am += 1
+        else:
+            phu_am += 1
+    elif ky_tu.isdigit():
+        so += 1
+    elif ky_tu.isspace():
+        khoang_trang += 1
+    else:
+        ky_tu_dac_biet += 1
+
+print(f"Chữ in hoa: {hoa}")
+print(f"Chữ in thường: {thuong}")
+print(f"Chữ số: {so}")
+print(f"Ký tự đặc biệt: {ky_tu_dac_biet}")
+print(f"Khoảng trắng: {khoang_trang}")
+print(f"Nguyên âm: {nguyen_am}")
+print(f"Phụ âm: {phu_am}")
