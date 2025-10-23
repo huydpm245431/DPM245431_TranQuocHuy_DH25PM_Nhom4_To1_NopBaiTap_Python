@@ -1,0 +1,18 @@
+
+N = int(input("Nhập số lượng phần tử N: "))
+
+lst = []
+
+print("Nhập các số theo thứ tự tăng dần:")
+
+for i in range(N):
+    while True:
+        num = int(input(f"Nhập số thứ {i+1}: "))
+        if i == 0 or num > lst[-1]:
+            lst.append(num)
+            break
+        else:
+            print("Số không lớn hơn số trước đó! Vui lòng nhập lại.")
+
+print("\n✅ Dãy số hợp lệ theo thứ tự tăng dần là:")
+print(lst)
