@@ -1,0 +1,46 @@
+
+def nhap_ma_tran(ten):
+    hang = int(input(f"Nhập số hàng của ma trận {ten}: "))
+    cot = int(input(f"Nhập số cột của ma trận {ten}: "))
+    print(f"Nhập các phần tử cho ma trận {ten}:")
+    M = []
+    for i in range(hang):
+        dong = list(map(float, input(f"  Dòng {i+1}: ").split()))
+        while len(dong) != cot:
+            print("Số phần tử không khớp số cột. Nhập lại!")
+            dong = list(map(float, input(f"  Dòng {i+1}: ").split()))
+        M.append(dong)
+    return M
+
+def in_ma_tran(M, ten="Ma trận"):
+    print(f"\n{ten}:")
+    for dong in M:
+        print(" ".join(f"{x:6.2f}" for x in dong))
+
+def cong_ma_tran(A, B):
+    hang = len(A)
+    cot = len(A[0])
+    C = [[A[i][j] + B[i][j] for j in range(cot)] for i in range(hang)]
+    return C
+
+def hoan_vi(M):
+    return [[M[j][i] for j in range(len(M))] for i in range(len(M[0]))]
+
+print("=== NHẬP MA TRẬN A ===")
+A = nhap_ma_tran("A")
+
+print("\n=== NHẬP MA TRẬN B ===")
+B = nhap_ma_tran("B")
+
+if len(A) == len(B) and len(A[0]) == len(B[0]):
+    C = cong_ma_tran(A, B)
+    in_ma_tran(A, "Ma trận A")
+    in_ma_tran(B, "Ma trận B")
+    in_ma_tran(C, "Tổng ma trận A + B")
+else:
+    print("Hai ma trận không cùng kích thước, không thể cộng!")
+
+A_T = hoan_vi(A)
+B_T = hoan_vi(B)
+in_ma_tran(A_T, "Ma trận hoán vị của A (Aᵀ)")
+in_ma_tran(B_T, "Ma trận hoán vị của B (Bᵀ)")

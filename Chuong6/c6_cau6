@@ -1,0 +1,12 @@
+lst = []
+N = int(input("Nhập số lượng phần tử N: "))
+
+while len(lst) < N:
+    num = int(input(f"Nhập số thứ {len(lst)+1}: "))
+    if num in lst:
+        print("Số này đã có, vui lòng nhập lại!")
+    else:
+        lst.append(num)
+
+print("Danh sách bạn đã nhập là:")
+print(lst)

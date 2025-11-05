@@ -1,0 +1,20 @@
+
+def la_nguyen_to(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+M = [3, 6, 7, 8, 11, 17, 2, 90, 2, 5, 4, 5, 8]
+
+so_le = [x for x in M if x % 2 != 0]
+so_chan = [x for x in M if x % 2 == 0]
+nguyen_to = [x for x in M if la_nguyen_to(x)]
+khong_nguyen_to = [x for x in M if not la_nguyen_to(x)]
+
+print("Dòng 1 - Các số lẻ:", so_le, f"→ Có {len(so_le)} số lẻ")
+print("Dòng 2 - Các số chẵn:", so_chan, f"→ Có {len(so_chan)} số chẵn")
+print("Dòng 3 - Các số nguyên tố:", nguyen_to)
+print("Dòng 4 - Các số không phải nguyên tố:", khong_nguyen_to)
